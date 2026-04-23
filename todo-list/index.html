@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>待办清单</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>待办清单</h1>
+    <p class="hint">输入任务后点「添加」或按回车。刷新页面后任务仍在。</p>
+
+    <form class="add-form" id="add-form">
+      <input
+        type="text"
+        id="task-input"
+        placeholder="要做的事…"
+        autocomplete="off"
+        maxlength="200"
+        aria-label="任务内容"
+      >
+      <button type="submit" id="add-btn">添加</button>
+    </form>
+
+    <p class="error" id="error-msg" hidden>请输入任务内容。</p>
+
+    <ul class="task-list" id="task-list"></ul>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
